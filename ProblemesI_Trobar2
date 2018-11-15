@@ -1,0 +1,44 @@
+'''
+Donada sequencia de multiples de 7 menors que 100000, comptar nombre vegades que surt digit 2.
+Recorda que per trobar 2 s'utilitza el modulus!!!
+'''
+
+package problemesi_comptadigits;
+import java.util.*;
+/**
+ *
+ * @author nuriatorquetluna
+ */
+public class ProblemesI_comptaDigits {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int num = 1;
+        int count = 0;
+        int multiple = 1;
+        int prod = 7;
+        while(multiple < 100){
+            multiple = 1;
+            multiple = num * prod;
+            
+            int prova = multiple;
+            while(prova > 0 ){
+                if(prova%10 == 2){
+                    count ++;
+                    
+                }
+                prova = prova/10;    
+                }
+            
+            num += 1;
+            
+            
+            
+        }
+        System.out.println(num);    
+        }
+        
+        }
+        

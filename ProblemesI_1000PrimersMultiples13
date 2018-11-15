@@ -1,0 +1,30 @@
+'''
+Imprimir els 1000 primers multiples de 13
+'''
+
+package problemesi_comptadigits;
+import java.util.*;
+/**
+ *
+ * @author nuriatorquetluna
+ */
+public class ProblemesI_comptaDigits {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int comptador = 1;
+        int superior = 1000;
+        int product = 13;
+        int result = 1;
+        while(result < superior){
+            int max = result * product;
+            result ++;
+            System.out.println(max);
+             
+         }
+      
+    }
+    
+}

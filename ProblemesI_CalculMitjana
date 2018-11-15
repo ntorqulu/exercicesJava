@@ -1,0 +1,32 @@
+'''
+calcular mitjana d'una serie de num entrats per teclat, un cop entrem el -1 ens retorna mitjana
+'''
+
+package problemesi_comptadigits;
+import java.util.*;
+/**
+ *
+ * @author nuriatorquetluna
+ */
+public class ProblemesI_comptaDigits {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Introdueix num per calcular mitjana");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int suma = 0;
+        int comptador = 0;
+        while (num != -1){
+            suma += num;
+            comptador ++;
+            System.out.println("Introdueix num per calcular mitjana");
+            num = sc.nextInt();
+        }
+        int mitjana = suma / comptador;
+        System.out.println(mitjana);
+    }
+    
+}

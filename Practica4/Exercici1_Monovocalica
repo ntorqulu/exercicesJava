@@ -1,0 +1,60 @@
+'''
+Introduir una frase acabada en fi i llavors transformar totes les vocals que apareguin en i
+'''
+Funcionament:
+2 metodes, main i monovocalica.
+Metode main demana a usuari una frase i la va separant mitjanaçant la funció .next() que llegeix d'espai en buit a espai en
+buit. Creem un string buida i fem un while dient que variable paraula vagi agafant trossos de la frase i evaluant-los si
+aquests no corresponen a fi.
+Metode monovocalica;
+crea un string buida i un for que recorre tots els index de la paraula introduida com a paramete. Si paraula.charAt(i) es
+equivalent als char a e i o u llavors afegim a l'string buida el char i, si no afegim el charAt(i).
+Finalment retornem el string
+
+
+package p4_frasemonovocalica;
+import java.util.*;
+ 
+/**
+ *
+ * @author nuriatorquetluna
+ */
+public class P4_FraseMonovocalica {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Entra una frase:");
+        Scanner sc = new Scanner(System.in);
+        String paraula = sc.next();
+        String fin = "";
+        while(!paraula.equals("fi")){
+            fin += monovocalica(paraula) + " ";
+            paraula = sc.next();
+
+        }
+        System.out.println(fin);
+        
+    }
+static String monovocalica (String paraula){
+    int n = paraula.length();
+    String par = paraula;
+    String nova = "";
+    for (int z = 0; z < n ; z ++){
+        char j =par.charAt(z);
+        char a = 'a', e = 'e', i = 'i' ,o = 'o' ,u = 'u'; 
+        if (j== a || j == e|| j == o || j == u){
+            j = 'i';
+            nova += j;
+        }
+        else{
+            nova +=j;
+        }
+    
+        }
+    return nova;       
+    
+}
+    
+}

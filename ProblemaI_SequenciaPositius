@@ -1,0 +1,33 @@
+'''
+Donada una sequencia d'enters, esbrinar si tots són positius
+'''
+
+package problemesi_comptadigits;
+import java.util.*;
+/**
+ *
+ * @author nuriatorquetluna
+ */
+public class ProblemesI_comptaDigits {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        boolean positius = true;
+        System.out.println("Introdueix un num");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        while(num != 0){
+            if (num < 0){
+                positius = false;
+            }
+            num = sc.nextInt();
+            
+        }
+        System.out.println(positius);
+                
+      
+    }
+    
+}

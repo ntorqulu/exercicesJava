@@ -1,0 +1,38 @@
+'''
+Dissenyar programa que donat enter per teclat, n , compti num de digits que conté
+'''
+
+2 maneres de solucionar-ho, una fàcil i una altra difícil:
+
+package problemesi_comptadigits;
+import java.util.*;
+/**
+ *
+ * @author nuriatorquetluna
+ */
+public class ProblemesI_comptaDigits {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Introdueix un num");
+        Scanner sc = new Scanner(System.in);
+        //Primera manera de resoldre'l
+        String num = sc.nextLine();
+        int end = num.length();
+        System.out.println(end);
+        
+        //Segona manera de resoldre'l
+        System.out.println("Introdueix un num");
+        int num2 = sc.nextInt();
+        int d = 0;
+        while (num2 != 0){
+            num2 = num2 /10;
+            d += 1;
+        
+        }
+        System.out.println(d); 
+    }
+    
+}

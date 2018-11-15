@@ -1,0 +1,36 @@
+'''
+Donada seqüencia enters positius acabada en -1, fer programa que trobi max i min.
+'''
+
+package problemesi_comptadigits;
+import java.util.*;
+/**
+ *
+ * @author nuriatorquetluna
+ */
+public class ProblemesI_comptaDigits {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Introdueix un num");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int min = num;
+        int max = num;
+        while((num != -1)){
+            num = sc.nextInt();
+            if((num < min) &&  (num != -1))
+                min = num;
+            if((num > max) &&  (num != -1))
+                max = num;
+            
+                
+                
+            } 
+        System.out.println(max);
+        System.out.println(min);
+            }
+        
+        }

@@ -1,0 +1,33 @@
+'''
+Calcular descomposicio factorial de nombres primers d'un nombre
+'''
+
+package problemesi_comptadigits;
+import java.util.*;
+/**
+ *
+ * @author nuriatorquetluna
+ */
+public class ProblemesI_comptaDigits {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Introdueix un num");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int d = 2;
+        while(d*d <= num){
+            while (num%d == 0){
+                System.out.println(d);
+                num = num/d;
+                
+            }
+            d += 1;
+        }
+        if(num>1){
+            System.out.println(num);
+        }
+        }
+            }

@@ -1,0 +1,48 @@
+'''
+introduir una frase i eliminar vocals i signes de puntuació, molt semblant al primer
+'''
+
+package problemesi_comptadigits;
+import java.util.*;
+/**
+ *
+ * @author nuriatorquetluna
+ */
+public class ProblemesI_comptaDigits {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Entra una frase");
+        Scanner sc = new Scanner(System.in);
+        String paraula = sc.next();
+        String suma = "";
+        while(!paraula.equals("fi")){
+            suma += monovocalica(paraula) + " ";
+            paraula = sc.next();
+        }
+        System.out.println(suma);
+        }
+    
+    
+    
+    static String monovocalica(String paraula) {
+        String str = "";
+        for(int i = 0;i < paraula.length(); i++){
+            
+            if (paraula.charAt(i) == 'a' || paraula.charAt(i) == 'e'||
+                    paraula.charAt(i) == 'o'||paraula.charAt(i) == 'u' ||
+                    paraula.charAt(i) == '.' ||paraula.charAt(i) == ',' ||
+                    paraula.charAt(i) == ':'||paraula.charAt(i) == ';' ||
+                    paraula.charAt(i) == '-' ||paraula.charAt(i) == 'i' ||paraula.charAt(i) == '\''){
+                
+                str += "";
+            }
+            else{
+                str += paraula.charAt(i);
+            }
+        }
+        return str;
+    }  
+        }

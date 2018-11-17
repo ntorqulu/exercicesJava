@@ -1,0 +1,42 @@
+'''
+Usuari introdueix ell mateix l'array, estipulant llargada i valors. Amb un segon metode calculem si els enters introduits
+estan ordenats
+'''
+
+package javaapplication59;
+import java.util.*;
+/**
+ *
+ * @author nuriatorquetluna
+ */
+public class JavaApplication59 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Quants nombres vols introduir");
+        Scanner sc = new Scanner(System.in);
+        int length = sc.nextInt();
+        System.out.println("Introdueix els seus valors");
+        int[] taula = new int[length];
+        for(int i = 0; i < length; i++){
+            int val = sc.nextInt();
+            taula[i] = val;
+               
+            }
+        System.out.println(ordenats(taula));
+        }
+        
+                     
+    
+    static boolean ordenats(int[] taula){
+        boolean ordenats = true;
+        for(int j= 0; j < taula.length - 1; j++){
+            if (taula[j]> taula[j+1]){
+                ordenats = false;
+            }
+        }
+        return ordenats;
+    }
+}

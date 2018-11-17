@@ -1,0 +1,36 @@
+'''
+Usuari introdueix un string que correspongui a un dia de la setmana i el programa et retorna l'index associat
+'''
+
+package javaapplication59;
+import java.util.*;
+/**
+ *
+ * @author nuriatorquetluna
+ */
+public class JavaApplication59 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Introdueix un número que correspongui a un dia de la stmna");
+        Scanner sc = new Scanner(System.in);
+        String dia = sc.next();
+        System.out.println(nombreDiaSetmana(dia));
+        
+        
+                
+    }
+    static int nombreDiaSetmana(String dia){
+        int num = 0;
+        String[] diesSetmana = {"Dilluns", "Dimarts", "Dimecres", 
+            "Dijous", "Divendres", "Dissabte", "Diumenge"};
+        for(int i = 0; i < diesSetmana.length; i++){
+            if (diesSetmana[i].equals(dia)){
+                num = i+1;
+            }
+        }
+        return num;
+    }
+}

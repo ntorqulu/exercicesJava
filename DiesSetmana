@@ -1,0 +1,31 @@
+'''
+Crea un programa que inicialitzi un array amb els dies de la Setmana. L'usuari entra un num i el programa haurà de retornar
+el dia de la setmana associat amb el num.
+'''
+
+package javaapplication59;
+import java.util.*;
+/**
+ *
+ * @author nuriatorquetluna
+ */
+public class JavaApplication59 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Introdueix un número que correspongui a un dia de la stmna");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        System.out.println(nomDiaSetmana(num));
+        
+        
+                
+    }
+    static String nomDiaSetmana(int num){
+        String[] diesSetmana = {"Dilluns", "Dimarts", "Dimecres", 
+            "Dijous", "Divendres", "Dissabte", "Diumenge"};
+        return diesSetmana[num-1];
+    }
+}

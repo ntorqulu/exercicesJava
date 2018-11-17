@@ -1,0 +1,42 @@
+'''
+Enters ordenats sense arrays
+'''
+
+package javaapplication59;
+import java.util.*;
+/**
+ *
+ * @author nuriatorquetluna
+ */
+public class JavaApplication59 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introdueix els valors dels enters espai per acabar");
+        String val = sc.nextLine();
+        String sum = "";
+        while (!val.equals(" ")){
+            sum = sum + val;
+            val = sc.nextLine();   
+            }
+        System.out.println(ordenats(sum));
+        }
+        
+                     
+    
+    static boolean ordenats(String sum){
+        boolean ordenats = true;
+        for(int j= 0; j < sum.length() - 1; j++){
+            int firstChar = (int)sum.charAt(j);
+            int secondChar = (int)sum.charAt(j+1);
+            if (firstChar > secondChar){
+                ordenats = false;
+            }
+        }
+        return ordenats;
+    }
+}
